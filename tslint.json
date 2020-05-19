@@ -1,0 +1,30 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts",
+      "dist/**/*.ts"
+    ]
+  },
+  "jsRules": {},
+  "rules": {
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "trailing-comma": false,
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "interface-over-type-literal": true
+  },
+  "rulesDirectory": []
+}

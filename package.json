@@ -1,0 +1,94 @@
+{
+  "name": "next-dev-component",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "files": [
+    "build"
+  ],
+  "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "storybook:export": "build-storybook",
+    "generate": "node ./util/create-component",
+    "prettier": "prettier --write src/**/*.{js,tsx,scss}",
+    "prettier:check": "prettier --list-different src/**/*.{ts,tsx,scss}",
+    "stylelint:check": "stylelint '**/*.scss' ;exit 0",
+    "stylelint": "stylelint '**/*.scss' --syntax scss --fix ;exit 0",
+    "tslint": "tslint -p tsconfig.json",
+    "tslint-fix": "tslint --fix -p tsconfig.json",
+    "lint": "npm run prettier && npm run stylelint:check && npm run tslint && npm run tslint-fix && npm run test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarveyD/react-component-library.git"
+  },
+  "keywords": [
+    "React",
+    "Component",
+    "Library",
+    "Rollup",
+    "Typescript",
+    "Sass",
+    "Storybook"
+  ],
+  "author": "next-dev-component",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarveyD/react-component-library/issues"
+  },
+  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@storybook/addon-docs": "^6.0.0-beta.8",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
+    "@types/jest": "^24.0.24",
+    "@types/react": "^16.9.12",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "fork-ts-checker-webpack-plugin": "^4.1.4",
+    "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "rollup": "^1.27.4",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "sass-loader": "^8.0.0",
+    "stylelint": "^13.3.3",
+    "ts-jest": "^25.4.0",
+    "ts-loader": "^7.0.4",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@storybook/preset-typescript": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-scss": "^3.17.1"
+  }
+}

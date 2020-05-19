@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "defaultSeverity": "warning",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "scss/at-import-partial-extension-blacklist": null,
+    "unit-whitelist": [
+      "em",
+      "rem",
+      "s",
+      "px"
+    ]
+  }
+}
