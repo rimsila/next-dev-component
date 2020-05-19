@@ -8,12 +8,13 @@
   ],
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "scripts": {
+    "deploy-storybook": "storybook-to-ghpages",
     "build": "rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
-    "publish": "npm publish npm && run storybook:export",
+    "publish": "npm publish && npm run deploy-storybook",
     "generate": "node ./util/create-component",
     "prettier": "prettier --write src/**/*.{js,tsx,scss}",
     "prettier:check": "prettier --list-different src/**/*.{ts,tsx,scss}",
@@ -88,6 +89,7 @@
   },
   "dependencies": {
     "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-scss": "^3.17.1"
