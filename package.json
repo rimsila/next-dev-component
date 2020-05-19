@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -14,7 +14,8 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
-    "publish": "npm publish && npm run deploy-storybook",
+    "publish": "npm publish",
+    "pubploy": "yarn deploy-storybook  && yarn publish",
     "generate": "node ./util/create-component",
     "prettier": "prettier --write src/**/*.{js,tsx,scss}",
     "prettier:check": "prettier --list-different src/**/*.{ts,tsx,scss}",
@@ -31,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/rimsila/next-dev-component.git"
   },
   "keywords": [
     "React",
@@ -45,9 +46,9 @@
   "author": "next-dev-component",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HarveyD/react-component-library/issues"
+    "url": "https://github.com/rimsila/next-dev-component/issues"
   },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/rimsila/next-dev-component#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
