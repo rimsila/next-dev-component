@@ -13,6 +13,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
+    "publish": "npm publish npm && run storybook:export",
     "generate": "node ./util/create-component",
     "prettier": "prettier --write src/**/*.{js,tsx,scss}",
     "prettier:check": "prettier --list-different src/**/*.{ts,tsx,scss}",
