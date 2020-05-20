@@ -2,11 +2,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Input from './Input';
-import { InputProps } from './Input.types';
+import NextButton from './NextButton';
+import { NextButtonProps } from './NextButton.types';
 
 describe('Test Component', () => {
-  let props: InputProps;
+  let props: NextButtonProps;
 
   beforeEach(() => {
     props = {
@@ -14,13 +14,13 @@ describe('Test Component', () => {
     };
   });
 
-  const renderComponent = () => render(<Input {...props} />);
+  const renderComponent = () => render(<NextButton {...props} />);
 
   it('should render foo text correctly', () => {
     props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId('Input');
+    const component = getByTestId('NextButton');
 
     expect(component).toHaveTextContent('harvey was here');
   });

@@ -1,0 +1,65 @@
+@import '../variables';
+@import '../util/mixins';
+//maring 
+.m-10 {
+  @include spacing($mrm: rem(10));
+}
+//margin right
+.mr-4 {
+  @include spacing($mrm: rem(4));
+}
+
+.mr-6 {
+  @include spacing($mrm: rem(6));
+}
+
+.mr-8 {
+  @include spacing($mrm: rem(8));
+}
+
+.mr-10 {
+  @include spacing($mrm: rem(10));
+}
+
+.mr-12 {
+  @include spacing($mrm: rem(12));
+}
+//margin top
+.mt-10 {
+  @include spacing($mtm: rem(10));
+}
+
+.mt-20 {
+  @include spacing($mtm: rem(20));
+}
+
+.mt-60 {
+  @include spacing($mtm: rem(60));
+}
+
+.pb-30 {
+  @include spacing($pbm: rem(30));
+}
+
+.ml-2 {
+  @include spacing($mlm: rem(2));
+}
+
+.ml-4 {
+  @include spacing($mlm: rem(4));
+}
+
+.ml-6 {
+  @include spacing($mlm: rem(6));
+}
+//margin left and rightu
+
+.mlr-4 {
+  @include spacing($mlm: rem(4), $mrm: rem(4));
+}
+
+// ============= padding =============
+
+.pdm-0 {
+  @include spacing($pdm: rem(0));
+}

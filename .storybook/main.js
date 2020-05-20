@@ -1,7 +1,12 @@
 const path = require('path');
-const fs  = require('fs');
+const fs = require('fs');
 const lessToJs = require('less-vars-to-js');
-const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, '../src/styles/ant-theme-override.less'), 'utf8'));
+const themeVariables = lessToJs(
+  fs.readFileSync(
+    path.join(__dirname, '../src/styles/ant-theme-override.less'),
+    'utf8'
+  )
+);
 
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
@@ -12,23 +17,28 @@ module.exports = {
       name: '@storybook/preset-ant-design',
       options: {
         lessOptions: {
-          modifyVars:themeVariables,
+          modifyVars: themeVariables,
         },
       },
     },
   ],
 
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.stories\.tsx?$/,
-      loaders: [
-        {
-          loader: require.resolve('@storybook/source-loader'),
-          options: { parser: 'typescript' },
-        },
-      ],
-      enforce: 'pre',
-    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      src: path.resolve(__dirname, "../src/"),
+      styles: path.resolve(__dirname, "../src/styles")
+    };
+      config.module.rules.push({
+        test: /\.stories\.tsx?$/,
+        loaders: [
+          {
+            loader: require.resolve('@storybook/source-loader'),
+            options: { parser: 'typescript' },
+          },
+        ],
+        enforce: 'pre',
+      });
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -42,7 +52,7 @@ module.exports = {
         presets: [['react-app', { flow: false, typescript: true }]],
       },
     });
-    config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve.extensions.push('.ts', '.tsx','.scss');
 
     return config;
   },

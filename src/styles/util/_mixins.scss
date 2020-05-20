@@ -2,6 +2,88 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+// App Mixins
+
+//mixin for container width
+@import '../variables';
+
+@mixin containerWidth($wdm: null, $mgm: auto) {
+  width: $wdm;
+  margin: $mgm;
+  @content;
+}
+
+$spDefault: null;
+// null it will not show at init until we proivdes value to param
+@mixin spacing(
+  $pdm: $spDefault,
+  $mgm: $spDefault,
+  $mbm: $spDefault,
+  $mtm: $spDefault,
+  $mlm: $spDefault,
+  $mrm: $spDefault,
+  $pbm: $spDefault,
+  //mixin param
+) {
+  padding: $pdm;
+  padding-bottom: $pbm;
+  margin: $mgm;
+  margin-bottom: $mbm;
+  margin-top: $mtm;
+  margin-left: $mlm;
+  margin-right: $mrm;
+
+  @content;
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+// usage
+// @include md{
+//   padding: 0 20px;
+// }
+
+//Function to convert px value into rem
+//You can replace rem with any other value you want (rem is most preferred value for web)
+// usage==> rem(1)
+$base-size: 16;
+@function rem($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -31,4 +113,3 @@
     @content;
   }
 }
-

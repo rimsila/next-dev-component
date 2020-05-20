@@ -1,22 +1,16 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import
-  'util/variables',
-  'util/functions',
-  'util/mixins';
+@import 'variables', 'util/functions', 'util/mixins';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+@import 'vendors/reset', 'vendors/normalize';
 
 // 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
+@import 'base/spacing', 'base/base', 'base/fonts', 'base/typography',
   'base/helpers';
 
 // 7. Themes
-@import
-  'themes/default';
+@import 'themes/default';
+// 7. Themes
+@import 'global-override';

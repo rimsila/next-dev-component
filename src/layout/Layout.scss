@@ -1,0 +1,19 @@
+.layout {
+  padding: 2rem;
+  .layout-head {
+    margin-bottom: 30px;
+  }
+  .layout-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 90vw;
+    margin-bottom: 10vh;
+  }
+  .layout-footer {
+    @extend .layout-content;
+  }
+  div.ant-typography, .ant-typography p {
+    margin-bottom: 1em;
+    display: flex;
+}
+}

@@ -1,3 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+$font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+
+@mixin font-defaults {
+  font-family: $font-family;
+}
+
+@mixin heading {
+  @include font-defaults;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
