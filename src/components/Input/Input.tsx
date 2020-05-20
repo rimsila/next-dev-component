@@ -1,14 +1,12 @@
 // Generated with util/create-component.js
 import React from 'react';
-
+import { Button } from 'antd';
 import { InputProps } from './Input.types';
 
 import './Input.scss';
 
 const Input: React.FC<InputProps> = ({ foo }) => (
-  <div data-testid="Input" className="foo-bar">
-    {foo}
-  </div>
+  <Button type="primary">Primary</Button>
 );
 
 export default Input;
