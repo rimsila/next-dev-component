@@ -9,5 +9,5 @@ export default create({
 
   brandTitle: 'Next-Dev-Component',
   brandUrl: 'https://next-dev-tech.netlify.com',
-  brandImage: '/asset/logo2.png',
+  brandImage: 'https://github.com/rimsila/next-dev-component/blob/master/src/asset/logo2.png',
 });
