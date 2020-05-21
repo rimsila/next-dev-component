@@ -18,9 +18,7 @@ export const Layout: FC<LayoutProps> = ({
         {children}
       </Col>
       <Col span={24} className="layout-footer">
-        {docs && 
-        <Paragraph copyable> {docs}</Paragraph>
-      }
+        {docs && <Paragraph copyable> {docs}</Paragraph>}
       </Col>
     </Row>
   );

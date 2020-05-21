@@ -1,6 +1,6 @@
 @import '../variables';
 @import '../util/mixins';
-//maring 
+//maring
 .m-10 {
   @include spacing($mrm: rem(10));
 }

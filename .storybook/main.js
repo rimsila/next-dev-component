@@ -9,10 +9,20 @@ const themeVariables = lessToJs(
 );
 
 module.exports = {
-  stories: ['../src/**/*.stories.tsx'],
+  stories: ['../src/**/*.stories.tsx',
+],
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [
     '@storybook/addon-storysource',
+    '@storybook/addon-actions',
+    '@storybook/addon-links',
+    '@storybook/addon-knobs',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+      },
+    },
     {
       name: '@storybook/preset-ant-design',
       options: {

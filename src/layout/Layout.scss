@@ -12,8 +12,9 @@
   .layout-footer {
     @extend .layout-content;
   }
-  div.ant-typography, .ant-typography p {
+  div.ant-typography,
+  .ant-typography p {
     margin-bottom: 1em;
     display: flex;
-}
+  }
 }

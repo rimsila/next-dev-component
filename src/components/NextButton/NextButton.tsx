@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { NextButtonProps } from './NextButton.types';
 import './NextButton.scss';
 
-
 export const NextButton: FC<NextButtonProps> = ({
   isRound,
   htmlType,
