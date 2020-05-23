@@ -4,9 +4,11 @@ import { Button } from 'antd';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { NextButtonProps } from './NextButton.types';
+import { PoweroffOutlined } from '@ant-design/icons';
 import './NextButton.scss';
 
 export const NextButton: FC<NextButtonProps> = ({
+  icon,
   isRound,
   htmlType,
   width,
@@ -19,7 +21,6 @@ export const NextButton: FC<NextButtonProps> = ({
   onClick,
   active,
   isLink,
-  isOnClick,
   url = '/',
   isPostion = true,
   postion = 'btn_center',
@@ -37,13 +38,13 @@ export const NextButton: FC<NextButtonProps> = ({
         )}
       >
         <Button
+          icon={icon}
           // @ts-ignore
           shape={isRound && `round`}
           // @ts-ignore
           htmlType={htmlType}
           disabled={disabled}
-          // @ts-ignore
-          onClick={isOnClick && onClick}
+          onClick={onClick}
           type="primary"
           style={{ width: `${width}`, height: `${height}` }}
           className={classNames(

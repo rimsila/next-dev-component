@@ -1,20 +1,15 @@
+@import '../styles/main.scss';
+
 .layout {
-  padding: 2rem;
-  .layout-head {
-    margin-bottom: 30px;
+  padding: 2rem 0;
+  @include lg {
+    align-items: center;
+    flex-direction: column;
   }
+
   .layout-content {
+    align-items: center;
     display: flex;
-    justify-content: space-around;
-    max-width: 90vw;
-    margin-bottom: 10vh;
-  }
-  .layout-footer {
-    @extend .layout-content;
-  }
-  div.ant-typography,
-  .ant-typography p {
-    margin-bottom: 1em;
-    display: flex;
+    justify-content: center;
   }
 }

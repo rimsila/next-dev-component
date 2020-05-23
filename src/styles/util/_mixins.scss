@@ -8,8 +8,8 @@
 @import '../variables';
 
 @mixin containerWidth($wdm: null, $mgm: auto) {
-  width: $wdm;
   margin: $mgm;
+  width: $wdm;
   @content;
 }
 
@@ -25,13 +25,13 @@ $spDefault: null;
   $pbm: $spDefault,
   //mixin param
 ) {
-  padding: $pdm;
-  padding-bottom: $pbm;
   margin: $mgm;
   margin-bottom: $mbm;
-  margin-top: $mtm;
   margin-left: $mlm;
   margin-right: $mrm;
+  margin-top: $mtm;
+  padding: $pdm;
+  padding-bottom: $pbm;
 
   @content;
 }

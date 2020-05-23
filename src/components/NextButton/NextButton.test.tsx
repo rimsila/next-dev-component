@@ -10,18 +10,17 @@ describe('Test Component', () => {
 
   beforeEach(() => {
     props = {
-      foo: 'bar',
+      label: 'bar',
+      cusClass: 'cusClass',
     };
   });
 
   const renderComponent = () => render(<NextButton {...props} />);
 
-  it('should render foo text correctly', () => {
-    props.foo = 'harvey was here';
+  it('should render label text correctly', () => {
+    props.label = 'label was here';
     const { getByTestId } = renderComponent();
-
     const component = getByTestId('NextButton');
-
-    expect(component).toHaveTextContent('harvey was here');
+    expect(component).toHaveTextContent('label was here');
   });
 });

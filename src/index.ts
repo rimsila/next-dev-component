@@ -1,2 +1,1 @@
-import { NextButton } from './components/NextButton/NextButton';
-export { NextButton };
+export { default as NextButton } from './components/NextButton/NextButton';

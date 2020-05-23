@@ -3,34 +3,42 @@
 
 .main-button-container {
   display: flex;
+
   &.btn_center {
     justify-content: center;
   }
+
   &.btn_left {
     justify-content: flex-start;
   }
+
   &.btn_right {
     justify-content: flex-end;
   }
+
   &.spacing30 {
     margin: rem(30);
   }
+
   &.top30 {
     margin-top: rem(30);
   }
+
   &.top20 {
     margin-top: rem(20);
   }
+
   .mainButton {
-    width: 180px;
     height: 50px;
     text-transform: uppercase;
+    width: 180px;
     @include sm {
       font-size: 11px;
-      width: 140px;
       height: 40px;
+      width: 140px;
     }
   }
+
   .isGhostPrimary {
     @extend .mainButton;
     background: none;
@@ -40,7 +48,7 @@
 
   button {
     &.active {
-      background: $primary !important;
+      background-color: $primary !important;
       color: #fff !important;
     }
   }

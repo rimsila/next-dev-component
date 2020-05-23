@@ -3,6 +3,7 @@ type postionType = 'btn_left' | 'btn_center' | 'btn_right';
 type spacingType = 'spacing30' | 'top30' | 'top20';
 
 export interface NextButtonProps {
+  icon?: React.ReactNode;
   label: React.ReactNode;
   cusClass?: string;
   isPrimary?: boolean;
@@ -13,11 +14,10 @@ export interface NextButtonProps {
   height?: string;
   htmlType?: string;
   disabled?: boolean;
-  onClick?: () => void;
   active?: boolean;
   isLink?: boolean;
   url?: string;
-  isOnClick?: boolean;
+  onClick?: any;
   postion?: postionType;
   isPostion?: boolean;
   containerSpacing?: spacingType;

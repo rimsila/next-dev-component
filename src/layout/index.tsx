@@ -1,25 +1,14 @@
 // Generated with util/create-component.js
 import React, { FC } from 'react';
-import { Row, Col, Typography } from 'antd';
+import { Row } from 'antd';
 import './Layout.scss';
-
-export const Layout: FC<LayoutProps> = ({
-  children,
-  title = 'Component',
-  docs,
-}) => {
-  const { Title, Paragraph } = Typography;
+interface ILayoutProps {
+  children?: React.ReactNode;
+}
+export const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
-    <Row justify="center" className="layout">
-      <Title level={4} className="layout-head">
-        {title}
-      </Title>
-      <Col span={24} className="layout-content">
-        {children}
-      </Col>
-      <Col span={24} className="layout-footer">
-        {docs && <Paragraph copyable> {docs}</Paragraph>}
-      </Col>
+    <Row className="layout" gutter={[0, 15]}>
+      {children}
     </Row>
   );
 };
