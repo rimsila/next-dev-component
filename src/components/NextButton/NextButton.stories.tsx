@@ -1,7 +1,7 @@
 import React from 'react';
 import NextButton from './NextButton';
 import { Layout } from '../../layout/index';
-// import NextButton from './next-dev-component';
+// import {NextButton} from 'next-dev-component';
 
 export const Primary = () => (
   <Layout>
