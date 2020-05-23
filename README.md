@@ -48,7 +48,7 @@ English
 ## 🔗 Links And Demo
 
 - [Home page porforlio](https://next-dev-tech.netlify.com)
-- [GitHub Page](https://next-dev-tech.netlify.com)
+- [GitHub](https://github.com/rimsila/next-dev-component)
 - [Document Components](https://rimsila.github.io/next-dev-component)
 - [Npm](https://www.npmjs.com/package/next-dev-component)
 

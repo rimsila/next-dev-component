@@ -3,7 +3,7 @@ import { withPaddings } from 'storybook-addon-paddings';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 // import { withKnobs } from '@storybook/addon-knobs';
 import { addReadme } from 'storybook-readme';
-import { withPerformance } from 'storybook-addon-performance';
+// import { withPerformance } from 'storybook-addon-performance';
 import JSXAddon from 'storybook-addon-jsx';
 
 
