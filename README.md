@@ -104,7 +104,7 @@ $ npm run dev or yarn dev
 
 Open your browser and visit http://localhost:6006/ .
 
-## Export static document for stroybook
+## Export static document for storybook
 
 ```bash
 $ yarn storybook:export
@@ -117,11 +117,11 @@ $ npm login (first time require)
 $ npm publish
 ```
 
-## Publish to NPM and export document to Github Page
+## Publish to NPM and deploy document to Github Page
 
 ```bash
 $ npm login (first time require)
-$ npm publish
+$ yarn pubploy
 ```
 
 ## 🖥 Environment Support
