@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ant.design">
-    <img width="200" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
+    <img width="200" src="https://raw.githubusercontent.com/rimsila/next-dev-component/master/src/asset/logo1.png">
   </a>
 </p>
 
@@ -45,6 +45,13 @@ An enterprise-class UI design language and React UI library extend from Ant Desi
 
 English
 
+## 🔗 Links And Demo
+
+- [Home page porforlio](https://next-dev-tech.netlify.com)
+- [GitHub Page](https://next-dev-tech.netlify.com)
+- [Document Components](https://rimsila.github.io/next-dev-component)
+- [Npm](https://www.npmjs.com/package/next-dev-component)
+
 ## ✨ Features
 
 - 🌈 Enterprise-class UI designed for web applications.
@@ -52,14 +59,16 @@ English
 - 🛡 Written in TypeScript with predictable static types.
 - 🎨 Powerful theme customization in every detail.
 
-## 📦 Install and build as your own library and publish to NPM for reuseable across project
-
-```bash
-npm i --save next-dev-component
-```
+## 📦 Install and build as your own library and publish to NPM
 
 ```bash
 yarn add next-dev-component
+```
+
+Or
+
+```bash
+npm i --save next-dev-component
 ```
 
 ## 🔨 Usage
@@ -78,13 +87,6 @@ const App = () => (
 
 `Next Component` is written in TypeScript with complete definitions, check [Use in TypeScript](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html) to getting started.
 
-## 🔗 Links
-
-- [Home page porforlio](https://next-dev-tech.netlify.com)
-- [GitHub Page](https://next-dev-tech.netlify.com)
-- [Document Components](https://rimsila.github.io/next-dev-component)
-- [Npm](https://www.npmjs.com/package/next-dev-component)
-
 ## Development
 
 Use Gitpod, a free online dev environment for GitHub.
@@ -101,6 +103,26 @@ $ npm run dev or yarn dev
 ```
 
 Open your browser and visit http://localhost:6006/ .
+
+## Export static document for stroybook
+
+```bash
+$ yarn storybook:export
+```
+
+## Publish to NPM
+
+```bash
+$ npm login (first time require)
+$ npm publish
+```
+
+## Publish to NPM and export document to Github Page
+
+```bash
+$ npm login (first time require)
+$ npm publish
+```
 
 ## 🖥 Environment Support
 
