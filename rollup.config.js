@@ -159,7 +159,7 @@ export default {
       ],
     }),
     scss({
-      output: packageJson.scss,
+      output: packageJson.main_css,
     }),
     isProd && terser(),
     !isProd &&
