@@ -131,6 +131,7 @@ export default {
       exclude: /node_modules/,
       babelrc: false,
       runtimeHelpers: true,
+      comments: false,
       presets: [
         '@babel/preset-env',
         '@babel/preset-react',
@@ -154,12 +155,14 @@ export default {
             helpers: true,
             regenerator: true,
             useESModules: false,
+            
           },
         ],
       ],
     }),
     scss({
       output: packageJson.main_css,
+      outputStyle: "compressed",
     }),
     isProd && terser(),
     !isProd &&
