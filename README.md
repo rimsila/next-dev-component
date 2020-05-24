@@ -8,7 +8,7 @@
 
 <div align="center">
 
-An enterprise-class UI design language and React UI library extend from Ant Design.
+A React UI library custom styles and extend from Ant Design.
 
 [npm-image]: http://img.shields.io/npm/v/antd.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/antd
@@ -55,7 +55,6 @@ English
 ## ✨ Features
 
 - 🌈 Enterprise-class UI designed for web applications.
-- 📦 A set of high-quality React components out of the box.
 - 🛡 Written in TypeScript with predictable static types.
 - 🎨 Powerful theme customization in every detail.
 
@@ -75,10 +74,11 @@ npm i --save next-dev-component
 
 ```jsx
 import { NextButton } from 'next-dev-component';
+import 'next-dev-component/build/index.css'; //import in index or root file ex: Next Js in _app.js
 
 const App = () => (
   <>
-    <NextButton label="Round" isRound disabled />
+    <NextButton label="Round" isRound />
   </>
 );
 ```
