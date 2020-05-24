@@ -2,7 +2,7 @@
 import React, { FC } from 'react';
 import { Button } from 'antd';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { NextButtonProps } from './NextButton.types';
 import { PoweroffOutlined } from '@ant-design/icons';
 import './NextButton.scss';
@@ -54,15 +54,7 @@ export const NextButton: FC<NextButtonProps> = ({
             active && 'active'
           )}
         >
-          <>
-            {isLink ? (
-              <Link to={url}>
-                <a>{label}</a>
-              </Link>
-            ) : (
-              label
-            )}
-          </>
+          <>{label}</>
         </Button>
       </div>
     </>

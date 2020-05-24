@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -103,7 +103,6 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
-    "react-router-dom": "^5.2.0",
     "react-storybook-addon-props-combinations": "^1.1.0",
     "rollup": "^1.27.4",
     "rollup-plugin-copy": "^3.3.0",
