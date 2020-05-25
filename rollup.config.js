@@ -1,73 +1,3 @@
-// import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-// import resolve from '@rollup/plugin-node-resolve';
-// import commonjs from '@rollup/plugin-commonjs';
-// import typescript from 'rollup-plugin-typescript2';
-// import sass from 'rollup-plugin-sass';
-// import copy from 'rollup-plugin-copy';
-// import serve from 'rollup-plugin-serve'
-// import packageJson from './package.json';
-
-// export default {
-//   input: 'src/index.ts',
-//   output: [
-//     {
-//       file: packageJson.main,
-//       format: 'cjs',
-//       sourcemap: true,
-//     },
-//     {
-//       file: packageJson.module,
-//       format: 'esm',
-//       sourcemap: true,
-//     },
-//   ],
-//   plugins: [
-//     serve("build/index.esm.js"),
-//     peerDepsExternal(),
-//     resolve(),
-//     commonjs({
-//       include: '/node_modules/',
-//       namedExports: {
-//         'node_modules/react-is/index.js': ['isFragment', 'ForwardRef'],
-//         'node_modules/react/index.js': [
-//           'cloneElement',
-//           'createRef',
-//           'Component',
-//           'PureComponent',
-//           'Fragment',
-//           'Children',
-//           'createElement',
-//           'forwardRef',
-//         ],
-//         'node_modules/react-dom/index.js': [
-//           'findDOMNode',
-//           'unstable_batchedUpdates',
-//           'render',
-//         ],
-//       },
-//     }),
-//     typescript({ useTsconfigDeclarationDir: true }),
-//     sass({
-//       insert: true,
-//     }),
-
-//     copy({
-//       targets: [
-//         {
-//           src: 'src/styles/variables.scss',
-//           dest: 'build',
-//           rename: 'variables.scss',
-//         },
-//         {
-//           src: 'src/styles/typography.scss',
-//           dest: 'build',
-//           rename: 'typography.scss',
-//         },
-//       ],
-//     }),
-//   ],
-//   external: ['react', 'react-dom', 'prop-types', 'antd','classnames'],
-// };
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -79,10 +9,14 @@ import livereload from 'rollup-plugin-livereload';
 import packageJson from './package.json';
 import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
+const purgecss = require('@fullhuman/postcss-purgecss')
+
 const extensions = ['.js', '.ts', '.tsx'];
 
 export default {
-  input:'src/index.ts',
+  input: 'src/index.ts',
   output: [
     {
       file: packageJson.main,
@@ -155,15 +89,25 @@ export default {
             helpers: true,
             regenerator: true,
             useESModules: false,
-            
           },
         ],
       ],
     }),
+
     scss({
       output: packageJson.main_css,
-      outputStyle: "compressed",
+      outputStyle: 'compressed',
+      processor: (css) =>
+        postcss([autoprefixer])
+          .process(css)
+          .then((result) => result.css),
     }),
+
+    postcss([
+      purgecss({
+        content: ['src/**/*.html', 'src/**/*.tsx', 'src/**/*.ts'],
+      }),
+    ]),
     isProd && terser(),
     !isProd &&
       serve({
