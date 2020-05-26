@@ -25,7 +25,7 @@ export const NextButton: FC<NextButtonProps> = ({
   postion = 'btn_center',
   containerSpacing,
   isContainerSpacing,
-  iconPostion
+  iconPostion,
 }) => {
   return (
     <>
