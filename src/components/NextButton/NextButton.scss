@@ -3,6 +3,15 @@
 
 .main-button-container {
   display: flex;
+
+  .icon_center {
+    .anticon {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   &.btn_center {
     justify-content: center;
   }
@@ -31,6 +40,7 @@
     height: 50px;
     text-transform: uppercase;
     width: 180px;
+
     @include sm {
       font-size: 11px;
       height: 40px;

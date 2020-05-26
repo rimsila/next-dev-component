@@ -1,10 +1,11 @@
 // Generated with util/create-component.js
 type postionType = 'btn_left' | 'btn_center' | 'btn_right';
 type spacingType = 'spacing30' | 'top30' | 'top20';
+type iconPostionType = 'icon_center';
 
 export interface NextButtonProps {
   icon?: React.ReactNode;
-  label: React.ReactNode;
+  label?: React.ReactNode;
   cusClass?: string;
   isPrimary?: boolean;
   isGhostPrimary?: boolean;
@@ -22,4 +23,5 @@ export interface NextButtonProps {
   isPostion?: boolean;
   containerSpacing?: spacingType;
   isContainerSpacing?: boolean;
+  iconPostion?: iconPostionType;
 }

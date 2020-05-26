@@ -10,9 +10,9 @@ export const NextButton: FC<NextButtonProps> = ({
   icon,
   isRound,
   htmlType,
-  width="",
-  height="",
-  label = 'button',
+  width = '180px',
+  height = '',
+  label = '',
   cusClass,
   isPrimary = true,
   isGhostPrimary,
@@ -25,6 +25,7 @@ export const NextButton: FC<NextButtonProps> = ({
   postion = 'btn_center',
   containerSpacing,
   isContainerSpacing,
+  iconPostion
 }) => {
   return (
     <>
@@ -47,6 +48,7 @@ export const NextButton: FC<NextButtonProps> = ({
           type="primary"
           style={{ width: `${width}`, height: `${height}` }}
           className={classNames(
+            iconPostion,
             isPrimary && 'mainButton',
             isGhostPrimary && 'isGhostPrimary',
             cusClass,

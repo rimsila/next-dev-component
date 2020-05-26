@@ -1,7 +1,6 @@
 import React from 'react';
 import NextButton from './NextButton';
 import { Layout } from '../../layout/index';
-import { storiesOf } from '@storybook/react';
 import { UseMapItem } from '../../util/mapItem';
 import { PoweroffOutlined } from '@ant-design/icons';
 import ButtonReadme from './NextButton.stories.md';
@@ -11,10 +10,7 @@ export default {
   parameters: {
     notes: `import {Button} from 'next-dev-component';`,
     readme: {
-      // Show readme before story
       content: ButtonReadme,
-      // Show readme at the addons panel
-      // sidebar: ButtonReadme,
     },
   },
 };
@@ -39,6 +35,31 @@ const button = [
   {
     item: <NextButton label=" Round" isRound />,
     copyCode: `<NextButton label=" Round" isRound />`,
+  },
+  {
+    item: (
+      <NextButton
+        iconPostion="icon_center"
+        icon={<PoweroffOutlined />}
+        width="40px"
+        height="40px"
+        isRound
+      />
+    ),
+    copyCode: `NextButton iconPostion='icon_center'  icon={<PoweroffOutlined/>} 
+    width="40px" height="40px" isRound/`,
+  },
+  {
+    item: (
+      <NextButton
+        iconPostion="icon_center"
+        icon={<PoweroffOutlined />}
+        width="40px"
+        height="40px"
+      />
+    ),
+    copyCode: `NextButton iconPostion='icon_center'  icon={<PoweroffOutlined/>} 
+    width="40px" height="40px"/`,
   },
 ];
 export const Primary = () => (

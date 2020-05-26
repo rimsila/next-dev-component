@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "keywords": [
     "React",
@@ -82,7 +82,8 @@
     "postcss": "^7.0.30",
     "react": "^16.13.1",
     "rollup-plugin-babel": "^4.4.0",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

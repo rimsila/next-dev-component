@@ -1,5 +1,5 @@
 export interface LayoutProps {
-  children: React.ReactNode;
-  title: React.ReactNode;
-  docs: React.ReactNode;
+  children?: React.ReactNode;
+  title?: React.ReactNode;
+  docs?: React.ReactNode;
 }
