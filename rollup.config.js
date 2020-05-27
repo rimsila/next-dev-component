@@ -1,4 +1,6 @@
 import replace from '@rollup/plugin-replace';
+const path = require('path');
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
@@ -11,24 +13,24 @@ import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
-const purgecss = require('@fullhuman/postcss-purgecss')
+import copy from "rollup-plugin-copy";
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 const extensions = ['.js', '.ts', '.tsx'];
-
+const componentPath = './src/components';
 export default {
-  input: 'src/index.ts',
+  input: [
+    path.resolve(__dirname, 'src/index.ts'),
+    path.resolve(__dirname, `${componentPath}/NextButton`),
+  ],
   output: [
     {
-      file: packageJson.main,
+      dir: packageJson.main,
       format: 'cjs',
       sourcemap: true,
     },
-    {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true,
-    },
   ],
+  preserveModules: true,
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify(
@@ -36,6 +38,7 @@ export default {
       ),
     }),
     typescript({ useTsconfigDeclarationDir: true }),
+    peerDepsExternal(),
     resolve({
       extensions,
     }),
@@ -69,7 +72,7 @@ export default {
       presets: [
         '@babel/preset-env',
         '@babel/preset-react',
-        '@babel/preset-typescript',
+        // '@babel/preset-typescript',
       ],
       plugins: [
         'react-require',
@@ -120,6 +123,20 @@ export default {
       livereload({
         watch: 'build',
       }),
+    copy({// for auto create component
+      targets: [
+        {
+          src: 'src/variables.scss',
+          dest: 'build',
+          rename: 'variables.scss',
+        },
+        {
+          src: 'src/typography.scss',
+          dest: 'build',
+          rename: 'typography.scss',
+        },
+      ],
+    }),
   ],
   external: [
     ...Object.keys(packageJson.dependencies || {}),
