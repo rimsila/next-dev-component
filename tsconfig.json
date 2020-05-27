@@ -2,8 +2,9 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "dist",
+    "outDir": "../dist/",
     "module": "esnext",
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "es6",
       "dom",
@@ -19,19 +20,23 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "noImplicitAny": false,
+    "typeRoots": [
+      "../typings",
+      "../node_modules/@types"
+  ]
   },
   "include": [
     "src/**/*",
-    ".storybook/**/*"
+    ".storybook/**/*", "index.ts",
+    "index.d.ts", 
   ],
   "exclude": [
     "node_modules",
-    "build",
     "src/**/*.stories.tsx",
     "src/**/*.test.tsx"
   ]

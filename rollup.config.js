@@ -21,7 +21,10 @@ const componentPath = 'src/components';
 export default {
   input: [
     // add more component here
-    path.resolve(__dirname, `${componentPath}/NextButton/NextButton.tsx`), 
+    // path.resolve(__dirname, 'index.ts'),// all in one
+    path.resolve(__dirname, `${componentPath}/NextButton/index.tsx`), 
+    path.resolve(__dirname, `${componentPath}/NextCard/index.tsx`), 
+    
   ],
   output: [
     {

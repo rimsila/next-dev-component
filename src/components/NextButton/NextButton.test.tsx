@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import NextButton from './NextButton';
+import NextButton from './index';
 import { NextButtonProps } from './NextButton.types';
 
 describe('Test Component', () => {

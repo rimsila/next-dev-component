@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.15",
+  "version": "1.0.18",
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "keywords": [
     "React",
@@ -27,6 +27,7 @@
   "files": [
     "dist"
   ],
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
     "deploy-storybook": "storybook-to-ghpages",
