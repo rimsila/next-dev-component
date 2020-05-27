@@ -20,14 +20,15 @@ const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = './src/components';
 export default {
   input: [
-    path.resolve(__dirname, 'src/index.ts'),
-    path.resolve(__dirname, `${componentPath}/NextButton`),
+    // add more component here
+    path.resolve(__dirname, `${componentPath}/NextButton/NextButton`), 
   ],
   output: [
     {
       dir: packageJson.main,
       format: 'cjs',
       sourcemap: true,
+      exports: 'named', /** Disable warning for default imports */
     },
   ],
   preserveModules: true,
@@ -117,22 +118,22 @@ export default {
         host: 'localhost',
         port: 3000,
         open: true,
-        contentBase: ['build'],
+        contentBase: ['dist'],
       }),
     !isProd &&
       livereload({
-        watch: 'build',
+        watch: 'dist',
       }),
     copy({// for auto create component
       targets: [
         {
           src: 'src/variables.scss',
-          dest: 'build',
+          dest: 'dist',
           rename: 'variables.scss',
         },
         {
           src: 'src/typography.scss',
-          dest: 'build',
+          dest: 'dist',
           rename: 'typography.scss',
         },
       ],
@@ -140,6 +141,5 @@ export default {
   ],
   external: [
     ...Object.keys(packageJson.dependencies || {}),
-    ...Object.keys(packageJson.peerDependencies || {}),
   ],
 };

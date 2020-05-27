@@ -67,12 +67,12 @@ export default {
       targets: [
         {
           src: "src/variables.scss",
-          dest: "build",
+          dest: "dist",
           rename: "variables.scss"
         },
         {
           src: "src/typography.scss",
-          dest: "build",
+          dest: "dist",
           rename: "typography.scss"
         }
       ]
