@@ -1,5 +1,5 @@
 import React from 'react';
-import NextButton from './';
+import NextButton from './NextButton';
 import { Layout } from '../../layout/index';
 import { UseMapItem } from '../../util/mapItem';
 import { PoweroffOutlined } from '@ant-design/icons';

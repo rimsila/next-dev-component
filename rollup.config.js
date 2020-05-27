@@ -17,11 +17,11 @@ import copy from "rollup-plugin-copy";
 const purgecss = require('@fullhuman/postcss-purgecss');
 
 const extensions = ['.js', '.ts', '.tsx'];
-const componentPath = './src/components';
+const componentPath = 'src/components';
 export default {
   input: [
     // add more component here
-    path.resolve(__dirname, `${componentPath}/NextButton/NextButton`), 
+    path.resolve(__dirname, `${componentPath}/NextButton/NextButton.tsx`), 
   ],
   output: [
     {
