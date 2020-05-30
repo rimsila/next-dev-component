@@ -1,7 +1,8 @@
 {
   "name": "next-dev-component",
   "version": "1.0.3",
-  "main": "build/index.js",
+  "main": "./build",
+  "types": "./build/index.d.ts",
   "module": "build/index.esm.js",
   "files": [
     "build"
@@ -9,7 +10,7 @@
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "scripts": {
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "rollup -c",
+    "build": "rimraf build && cross-env NODE_ENV=production rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
@@ -89,9 +90,21 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@rollup/plugin-multi-entry": "^3.0.1",
+    "@rollup/plugin-replace": "^2.3.2",
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/storybook-deployer": "^2.8.6",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "autoprefixer": "^9.8.0",
+    "d": "^1.0.1",
+    "postcss": "^7.0.31",
+    "rollup-plugin-scss": "^2.5.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^6.1.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-scss": "^3.17.1"
   }
