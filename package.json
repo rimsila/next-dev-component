@@ -22,14 +22,14 @@
   },
   "license": "ISC",
   "author": "next-dev-component",
-  "main": "dist",
-  "main_css": "dist/index.css",
+  "main": "./lib",
+  "types": "./lib/index.d.ts",
+  "module": "lib/index.esm.js",
   "files": [
-    "dist"
+    "lib"
   ],
-  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
+    "build": "rimraf lib && cross-env NODE_ENV=production rollup -c",
     "deploy-storybook": "storybook-to-ghpages",
     "dev": "start-storybook -p 6006 -s src",
     "generate": "node ./util/create-component",
@@ -66,12 +66,12 @@
     ]
   },
   "dependencies": {
-    "@ant-design/icons": "^4.1.0",
+    "@ant-design/icons": "^4.2.1",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@storybook/preset-ant-design": "^0.0.1",
     "@storybook/source-loader": "^5.3.19",
-    "antd": "^4.2.4",
+    "antd": "^4.2.5",
     "autoprefixer": "^9.8.0",
     "babel-preset-react-app": "^9.1.2",
     "classnames": "^2.2.6",

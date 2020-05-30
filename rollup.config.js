@@ -7,24 +7,24 @@ import babel from 'rollup-plugin-babel';
 import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
+// import livereload from 'rollup-plugin-livereload';
 import packageJson from './package.json';
 import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 import copy from 'rollup-plugin-copy';
+import sass from "rollup-plugin-sass";
 const purgecss = require('@fullhuman/postcss-purgecss');
-import multi from '@rollup/plugin-multi-entry';
 
 const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = 'src/components';
 export default {
   input: [
-
-    `${componentPath}/NextButton/NextButton.tsx`,
-    `${componentPath}/NextCard/NextCard.tsx`,
+    `${componentPath}/NextButton/NextButton`,
+    `${componentPath}/NextCard/NextCard`,
   ],
+  // input: "src/index.ts",
   output: [
     {
       dir: packageJson.main,
@@ -42,7 +42,6 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     peerDepsExternal(),
-    multi(),
     resolve({
       extensions,
     }),
@@ -101,8 +100,9 @@ export default {
       ],
     }),
 
-    scss({
-      output: packageJson.main_css,
+    sass({
+      // output: packageJson.main_css,
+      insert: true,
       outputStyle: 'compressed',
       processor: (css) =>
         postcss([autoprefixer])
@@ -116,32 +116,32 @@ export default {
       }),
     ]),
     isProd && terser(),
-    !isProd &&
-      serve({
-        host: 'localhost',
-        port: 3000,
-        open: true,
-        contentBase: ['dist'],
-      }),
-    !isProd &&
-      livereload({
-        watch: 'dist',
-      }),
-    copy({
-      // for auto create component
-      targets: [
-        {
-          src: 'src/variables.scss',
-          dest: 'dist',
-          rename: 'variables.scss',
-        },
-        {
-          src: 'src/typography.scss',
-          dest: 'dist',
-          rename: 'typography.scss',
-        },
-      ],
-    }),
+    // !isProd &&
+    //   serve({
+    //     host: 'localhost',
+    //     port: 3000,
+    //     open: true,
+    //     contentBase: ['build'],
+    //   }),
+    // !isProd &&
+    //   livereload({
+    //     watch: 'build',
+    //   }),
+    // copy({
+    //   // for auto create component
+    //   targets: [
+    //     {
+    //       src: 'src/variables.scss',
+    //       dest: 'build',
+    //       rename: 'variables.scss',
+    //     },
+    //     {
+    //       src: 'src/typography.scss',
+    //       dest: 'build',
+    //       rename: 'typography.scss',
+    //     },
+    //   ],
+    // }),
   ],
   external: [...Object.keys(packageJson.dependencies || {})],
 };
