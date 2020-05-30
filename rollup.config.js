@@ -1,6 +1,6 @@
 import replace from '@rollup/plugin-replace';
 const path = require('path');
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
@@ -13,25 +13,24 @@ import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
-import copy from "rollup-plugin-copy";
+import copy from 'rollup-plugin-copy';
 const purgecss = require('@fullhuman/postcss-purgecss');
+import multi from '@rollup/plugin-multi-entry';
 
 const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = 'src/components';
 export default {
   input: [
-    // add more component here
-    // path.resolve(__dirname, 'index.ts'),// all in one
-    path.resolve(__dirname, `${componentPath}/NextButton/index.tsx`), 
-    path.resolve(__dirname, `${componentPath}/NextCard/index.tsx`), 
-    
+
+    `${componentPath}/NextButton/NextButton.tsx`,
+    `${componentPath}/NextCard/NextCard.tsx`,
   ],
   output: [
     {
       dir: packageJson.main,
       format: 'cjs',
       sourcemap: true,
-      exports: 'named', /** Disable warning for default imports */
+      exports: 'named' /** Disable warning for default imports */,
     },
   ],
   preserveModules: true,
@@ -43,6 +42,7 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     peerDepsExternal(),
+    multi(),
     resolve({
       extensions,
     }),
@@ -127,7 +127,8 @@ export default {
       livereload({
         watch: 'dist',
       }),
-    copy({// for auto create component
+    copy({
+      // for auto create component
       targets: [
         {
           src: 'src/variables.scss',
@@ -142,7 +143,5 @@ export default {
       ],
     }),
   ],
-  external: [
-    ...Object.keys(packageJson.dependencies || {}),
-  ],
+  external: [...Object.keys(packageJson.dependencies || {})],
 };

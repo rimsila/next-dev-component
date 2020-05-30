@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "keywords": [
     "React",
@@ -68,6 +68,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@rollup/plugin-multi-entry": "^3.0.1",
     "@storybook/preset-ant-design": "^0.0.1",
     "@storybook/source-loader": "^5.3.19",
     "antd": "^4.2.4",
