@@ -16,13 +16,12 @@ import postcss from 'postcss';
 import copy from 'rollup-plugin-copy';
 import sass from "rollup-plugin-sass";
 const purgecss = require('@fullhuman/postcss-purgecss');
-import multi from '@rollup/plugin-multi-entry';
 
 const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = 'src/components';
 export default {
   input: [
-    `${componentPath}/TestComponent/TestComponent.tsx`,
+    `${componentPath}/TestComponent`,
     `${componentPath}/Input/Input.tsx`,
   ],
   // input: "src/index.ts",
@@ -43,7 +42,6 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     peerDepsExternal(),
-    // multi(),
     resolve({
       extensions,
     }),

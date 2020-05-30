@@ -1,16 +1,16 @@
 {
   "name": "next-dev-component",
   "version": "1.0.3",
-  "main": "./build",
-  "types": "./build/index.d.ts",
-  "module": "build/index.esm.js",
+  "main": "./lib",
+  "types": "./lib/index.d.ts",
+  "module": "lib/index.esm.js",
   "files": [
-    "build"
+    "lib"
   ],
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "scripts": {
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "rimraf build && cross-env NODE_ENV=production rollup -c",
+    "build": "rimraf lib && cross-env NODE_ENV=production rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",

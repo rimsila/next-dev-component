@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import TestComponent from './TestComponent';
+import TestComponent from './index';
 import { TestComponentProps } from './TestComponent.types';
 
 describe('Test Component', () => {
