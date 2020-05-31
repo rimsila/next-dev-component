@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react';
-import NextCard from './NextCard';
+import NextCard from './index';
 
 export default {
   title: 'NextCard',

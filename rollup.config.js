@@ -4,7 +4,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-import scss from 'rollup-plugin-scss';
+// import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
 // import livereload from 'rollup-plugin-livereload';
@@ -13,7 +13,7 @@ import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
-import copy from 'rollup-plugin-copy';
+// import copy from 'rollup-plugin-copy';
 import sass from "rollup-plugin-sass";
 const purgecss = require('@fullhuman/postcss-purgecss');
 
@@ -21,8 +21,8 @@ const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = 'src/components';
 export default {
   input: [
-    `${componentPath}/NextButton/NextButton`,
-    `${componentPath}/NextCard/NextCard`,
+    `${componentPath}/NextButton`,
+    `${componentPath}/NextCard`,
   ],
   // input: "src/index.ts",
   output: [
