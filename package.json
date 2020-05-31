@@ -33,7 +33,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "dev": "start-storybook -p 6006 -s src",
     "generate": "node ./util/create-component",
-    "lint": "npm run prettier && npm run stylelint:check && npm run tslint && npm run tslint-fix",
+    "lint": "npm run prettier && npm run tslint && npm run tslint-fix",
     "prettier": "prettier --write src/**/*.{js,tsx,scss}",
     "prettier:check": "prettier --list-different src/**/*.{ts,tsx,scss}",
     "publish": "npm publish",
