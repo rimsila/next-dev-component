@@ -16,12 +16,19 @@ import postcss from 'postcss';
 // import copy from 'rollup-plugin-copy';
 import sass from "rollup-plugin-sass";
 const purgecss = require('@fullhuman/postcss-purgecss');
+// import {a} from './src/components/NextButton/ui-button'
 
 const extensions = ['.js', '.ts', '.tsx'];
 const componentPath = 'src/components';
 export default {
   input: [
     `${componentPath}/NextButton`,
+    `${componentPath}/NextButton/ui-button`,
+    `${componentPath}/NextButton/ui-button2`,
+    `${componentPath}/NextButton/ui-button3`,
+    `${componentPath}/NextButton/ui-button4`,
+    `${componentPath}/NextButton/ui-button5`,
+    `${componentPath}/NextButton/ui-button6`,
     `${componentPath}/NextCard`,
   ],
   // input: "src/index.ts",

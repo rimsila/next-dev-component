@@ -4,7 +4,7 @@ import { Row } from 'antd';
 import { LayoutProps } from './Layout.types';
 import './Layout.scss';
 
-export const Layout: FC<LayoutProps> = ({ children,gut1=0,gut2=15 }) => {
+export const Layout: FC<LayoutProps> = ({ children, gut1 = 0, gut2 = 15 }) => {
   return (
     <Row className="layout" gutter={[gut1, gut2]}>
       {children}
