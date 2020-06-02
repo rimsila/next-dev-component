@@ -13,7 +13,7 @@ export const NextButtonUI9: FC<NextButtonProps> = (props) => {
     postion = 'btn_center',
     onClick,
     isRound,
-    btn9Type ='type1',
+    btn9Type = 'type1',
     isLink,
   } = props;
   return (

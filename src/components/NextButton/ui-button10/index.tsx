@@ -15,14 +15,13 @@ export const NextButtonUI10: FC<NextButtonProps> = (props) => {
     isRound,
     btn9Type = 'type1',
     isLink,
-    labelBack
+    labelBack,
   } = props;
   return (
     <>
       <span className={classNames('NextButtonUI10', postion)}>
-     
         <div className="flip">
-          <a >
+          <a>
             <div className="front">{label}</div>
             <div className="back">{labelBack}</div>
           </a>

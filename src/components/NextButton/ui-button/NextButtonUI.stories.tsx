@@ -16,15 +16,21 @@ import { NextButtonUI12 } from '../ui-button12';
 
 const NextButton = [
   {
-    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />,
+    item: (
+      <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />
+    ),
     copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />`,
   },
   {
-    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleUp" />,
+    item: (
+      <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleUp" />
+    ),
     copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleUp" />`,
   },
   {
-    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleDown" />,
+    item: (
+      <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleDown" />
+    ),
     copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleDown" />`,
   },
   {
