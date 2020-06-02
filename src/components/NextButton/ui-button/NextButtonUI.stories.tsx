@@ -7,17 +7,94 @@ import { NextButtonUI3 } from '../ui-button3';
 import { NextButtonUI4 } from '../ui-button4';
 import { NextButtonUI5 } from '../ui-button5';
 import { NextButtonUI6 } from '../ui-button6';
-
-export default {
-  title: 'NextButton',
-  parameters: {
-    readme: {
-      // content: ButtonReadme,
-    },
-  },
-};
+import { NextButtonUI7 } from '../ui-button7';
+import { NextButtonUI8 } from '../ui-button8';
+import { NextButtonUI9 } from '../ui-button9';
+import { NextButtonUI10 } from '../ui-button10';
+import { NextButtonUI11 } from '../ui-button11';
+import { NextButtonUI12 } from '../ui-button12';
 
 const NextButton = [
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />`,
+  },
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleUp" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleUp" />`,
+  },
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleDown" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-bubbleDown" />`,
+  },
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="fx-sliderIn" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="fx-sliderIn" />`,
+  },
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="fx-bubbleUp" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="fx-bubbleUp" />`,
+  },
+  {
+    item: <NextButtonUI12 label="effect12" btn12Type="fx-bubbleDown" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="fx-bubbleDown" />`,
+  },
+  {
+    item: <NextButtonUI11 label="effect11" />,
+    copyCode: `<NextButtonUI11 label="effect11"  />`,
+  },
+  {
+    item: <NextButtonUI10 label="flip" labelBack="back" />,
+    copyCode: `<NextButtonUI10 label="flip" labelBack="back" />`,
+  },
+  {
+    item: <NextButtonUI9 label="effect4" btn9Type="type4" />,
+    copyCode: ` <NextButtonUI9 label="effect4" btn9Type="type4" />`,
+  },
+  {
+    item: <NextButtonUI9 label="effect3" btn9Type="type3" />,
+    copyCode: ` <NextButtonUI9 label="effect3" btn9Type="type3" />`,
+  },
+  {
+    item: <NextButtonUI9 label="effect2" btn9Type="type2" />,
+    copyCode: ` <NextButtonUI9 label="effect2" btn9Type="type2" />`,
+  },
+  {
+    item: <NextButtonUI9 label="effect1" btn9Type="type1" />,
+    copyCode: ` <NextButtonUI9 label="effect1" btn9Type="type1" />`,
+  },
+  {
+    item: <NextButtonUI8 label="MASK2" btn8Type="button-container-2" />,
+    copyCode: `<NextButtonUI8 label="MASK2" btn8Type="button-container-2" />`,
+  },
+  {
+    item: <NextButtonUI8 label="MASK1" btn8Type="button-container-1" />,
+    copyCode: `<NextButtonUI8 label="MASK1" btn8Type="button-container-1" />`,
+  },
+  {
+    item: <NextButtonUI7 label="offset" btn7Type="offset" />,
+    copyCode: ` <NextButtonUI7 label="offset" btn7Type="offset" />`,
+  },
+  {
+    item: <NextButtonUI7 label="slide" btn7Type="slide" />,
+    copyCode: ` <NextButtonUI7 label="slide" btn7Type="slide" />`,
+  },
+  {
+    item: <NextButtonUI7 label="Fill In" btn7Type="fill" />,
+    copyCode: ` <NextButtonUI7 label="Fill In" btn7Type="fill" />`,
+  },
+  {
+    item: <NextButtonUI7 label="pulse" btn7Type="pulse" />,
+    copyCode: ` <NextButtonUI7 label="pulse" btn7Type="pulse" />`,
+  },
+  {
+    item: <NextButtonUI7 label="close" btn7Type="close" />,
+    copyCode: ` <NextButtonUI7 label="close" btn7Type="close" />`,
+  },
+  {
+    item: <NextButtonUI7 label="raise" btn7Type="raise" />,
+    copyCode: ` <NextButtonUI7 label="raise" btn7Type="raise" />`,
+  },
   {
     item: <NextButtonUi1 label="Button_UI1" />,
     copyCode: `<NextButtonUi1 label="Button_UI1"/>`,
@@ -85,3 +162,11 @@ export const ButtonUI = () => (
     </Layout>
   </>
 );
+export default {
+  title: 'NextButton',
+  parameters: {
+    readme: {
+      // content: ButtonReadme,
+    },
+  },
+};

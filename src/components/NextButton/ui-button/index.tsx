@@ -4,7 +4,7 @@ import './styles.scss';
 import { NextButtonProps } from '../NextButton.types';
 import classNames from 'classnames';
 
-export const NextButtonUi1: FC<NextButtonProps> = props => {
+export const NextButtonUi1: FC<NextButtonProps> = (props) => {
   const {
     label,
     isContainerSpacing,

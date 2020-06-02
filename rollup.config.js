@@ -29,6 +29,9 @@ export default {
     `${componentPath}/NextButton/ui-button4`,
     `${componentPath}/NextButton/ui-button5`,
     `${componentPath}/NextButton/ui-button6`,
+    `${componentPath}/NextButton/ui-button7`,
+    `${componentPath}/NextButton/ui-button8`,
+
     `${componentPath}/NextCard`,
   ],
   // input: "src/index.ts",

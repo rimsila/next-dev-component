@@ -4,7 +4,7 @@ import './styles.scss';
 import { NextButtonProps } from '../NextButton.types';
 import classNames from 'classnames';
 
-export const NextButtonUI6: FC<NextButtonProps> = (props) => {
+export const NextButtonUI7: FC<NextButtonProps> = (props) => {
   const {
     label,
     isContainerSpacing,
@@ -13,22 +13,17 @@ export const NextButtonUI6: FC<NextButtonProps> = (props) => {
     postion = 'btn_center',
     onClick,
     isRound,
-    btn5Type,
+    btn7Type='fill',
     isLink,
+    
   } = props;
   return (
     <>
-      <span className={classNames('NextButtonUI6', postion)}>
-        {isLink ? (
-          <a href="#" className="btn btn--stripe">
-            {label}
-          </a>
-        ) : (
-          <button className={classNames('btn', btn5Type)}>{label}</button>
-        )}
+      <span className={classNames('NextButtonUI7', postion)}>
+      <button className={btn7Type}>{label}</button>
       </span>
     </>
   );
 };
 
-export default NextButtonUI6;
+export default NextButtonUI7;
