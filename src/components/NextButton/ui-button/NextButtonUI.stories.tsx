@@ -13,8 +13,13 @@ import { NextButtonUI9 } from '../ui-button9';
 import { NextButtonUI10 } from '../ui-button10';
 import { NextButtonUI11 } from '../ui-button11';
 import { NextButtonUI12 } from '../ui-button12';
+import NextButtonUI13 from '../ui-button13';
 
 const NextButton = [
+  {
+    item: <NextButtonUI13 label="border" />,
+    copyCode: `<NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />`,
+  },
   {
     item: (
       <NextButtonUI12 label="effect12" btn12Type="is-reversed fx-sliderIn" />

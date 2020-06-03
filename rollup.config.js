@@ -31,7 +31,11 @@ export default {
     `${componentPath}/NextButton/ui-button6`,
     `${componentPath}/NextButton/ui-button7`,
     `${componentPath}/NextButton/ui-button8`,
-
+    `${componentPath}/NextButton/ui-button9`,
+    `${componentPath}/NextButton/ui-button10`,
+    `${componentPath}/NextButton/ui-button11`,
+    `${componentPath}/NextButton/ui-button12`,
+    `${componentPath}/NextButton/ui-button13`,
     `${componentPath}/NextCard`,
   ],
   // input: "src/index.ts",
@@ -114,10 +118,10 @@ export default {
       // output: packageJson.main_css,
       insert: true,
       outputStyle: 'compressed',
-      processor: (css) =>
-        postcss([autoprefixer])
-          .process(css)
-          .then((result) => result.css),
+      // processor: (css) =>
+      //   postcss([autoprefixer])
+      //     .process(css)
+      //     .then((result) => result.css),
     }),
 
     postcss([

@@ -35,8 +35,13 @@ type btn12Type =
   | 'is-reversed fx-bubbleDown'
   | 'is-reversed fx-bubbleUp'
   | 'is-reversed fx-sliderIn';
+type btn13Type =
+  | 'draw-border';
+ 
+ 
 
 export interface NextButtonProps {
+  btn13Type?: btn13Type;
   labelBack?: string;
   btn12Type?: btn12Type;
   btn9Type?: btn9Type;

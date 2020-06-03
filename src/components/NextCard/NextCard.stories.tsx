@@ -7,5 +7,3 @@ export default {
 };
 
 export const WithBar = () => <NextCard foo="bar" />;
-
-export const WithBaz = () => <NextCard foo="baz" />;

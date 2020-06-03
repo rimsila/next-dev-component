@@ -5,9 +5,9 @@ import { NextCardProps } from './NextCard.types';
 
 import './NextCard.scss';
 
-const NextCard: React.FC<NextCardProps> = ({ foo }) => (
+const NextCard: React.FC<NextCardProps> = () => (
   <div data-testid="NextCard" className="foo-bar">
-    {foo}
+   foo
   </div>
 );
 

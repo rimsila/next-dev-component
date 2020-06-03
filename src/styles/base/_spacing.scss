@@ -2,7 +2,13 @@
 @import '../util/mixins';
 //maring
 .m-10 {
-  @include spacing($mrm: rem(10));
+  @include spacing($mgm: rem(10));
+}
+.m-20 {
+  @include spacing($mgm: rem(20));
+}
+.m-30 {
+  @include spacing($mgm: rem(30));
 }
 //margin right
 .mr-4 {
