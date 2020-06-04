@@ -1,59 +1,31 @@
-import replace from '@rollup/plugin-replace';
-const path = require('path');
+import copy from 'rollup-plugin-copy';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-// import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
-import serve from 'rollup-plugin-serve';
-// import livereload from 'rollup-plugin-livereload';
 import packageJson from './package.json';
 import typescript from 'rollup-plugin-typescript2';
-const isProd = process.env.NODE_ENV === 'production';
-import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
-// import copy from 'rollup-plugin-copy';
-import sass from "rollup-plugin-sass";
+import sass from 'rollup-plugin-sass';
 const purgecss = require('@fullhuman/postcss-purgecss');
-// import {a} from './src/components/NextButton/ui-button'
-
 const extensions = ['.js', '.ts', '.tsx'];
-const componentPath = 'src/components';
+
 export default {
   input: [
-    `${componentPath}/NextButton`,
-    `${componentPath}/NextButton/ui-button`,
-    `${componentPath}/NextButton/ui-button2`,
-    `${componentPath}/NextButton/ui-button3`,
-    `${componentPath}/NextButton/ui-button4`,
-    `${componentPath}/NextButton/ui-button5`,
-    `${componentPath}/NextButton/ui-button6`,
-    `${componentPath}/NextButton/ui-button7`,
-    `${componentPath}/NextButton/ui-button8`,
-    `${componentPath}/NextButton/ui-button9`,
-    `${componentPath}/NextButton/ui-button10`,
-    `${componentPath}/NextButton/ui-button11`,
-    `${componentPath}/NextButton/ui-button12`,
-    `${componentPath}/NextButton/ui-button13`,
-    `${componentPath}/NextCard`,
+    'src/index.ts',
   ],
-  // input: "src/index.ts",
   output: [
     {
       dir: packageJson.main,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: 'inline',
       exports: 'named' /** Disable warning for default imports */,
     },
   ],
   preserveModules: true,
   plugins: [
-    replace({
-      'process.env.NODE_ENV': JSON.stringify(
-        isProd ? 'production' : 'development'
-      ),
-    }),
+    resolve(),
     typescript({ useTsconfigDeclarationDir: true }),
     peerDepsExternal(),
     resolve({
@@ -84,44 +56,13 @@ export default {
       extensions,
       exclude: /node_modules/,
       babelrc: false,
-      runtimeHelpers: true,
       comments: false,
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-        // '@babel/preset-typescript',
-      ],
-      plugins: [
-        'react-require',
-        '@babel/plugin-syntax-dynamic-import',
-        '@babel/plugin-proposal-class-properties',
-        [
-          '@babel/plugin-proposal-object-rest-spread',
-          {
-            useBuiltIns: true,
-          },
-        ],
-
-        [
-          '@babel/plugin-transform-runtime',
-          {
-            corejs: 3,
-            helpers: true,
-            regenerator: true,
-            useESModules: false,
-          },
-        ],
-      ],
+     
     }),
 
     sass({
-      // output: packageJson.main_css,
       insert: true,
       outputStyle: 'compressed',
-      // processor: (css) =>
-      //   postcss([autoprefixer])
-      //     .process(css)
-      //     .then((result) => result.css),
     }),
 
     postcss([
@@ -129,33 +70,21 @@ export default {
         content: ['src/**/*.html', 'src/**/*.tsx', 'src/**/*.ts'],
       }),
     ]),
-    isProd && terser(),
-    // !isProd &&
-    //   serve({
-    //     host: 'localhost',
-    //     port: 3000,
-    //     open: true,
-    //     contentBase: ['build'],
-    //   }),
-    // !isProd &&
-    //   livereload({
-    //     watch: 'build',
-    //   }),
-    // copy({
-    //   // for auto create component
-    //   targets: [
-    //     {
-    //       src: 'src/variables.scss',
-    //       dest: 'build',
-    //       rename: 'variables.scss',
-    //     },
-    //     {
-    //       src: 'src/typography.scss',
-    //       dest: 'build',
-    //       rename: 'typography.scss',
-    //     },
-    //   ],
-    // }),
+    terser(),
+    copy({
+      //auto copy to use in lib 
+      targets: [
+        {
+          src: 'src/styles',
+          dest: 'lib',
+          rename: 'styles',
+        },
+        {
+          src: 'src',
+          dest: 'lib/view-dev-code',
+        },
+      ],
+    }),
   ],
   external: [...Object.keys(packageJson.dependencies || {})],
 };

@@ -10,6 +10,7 @@ import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import typescript from 'rollup-plugin-typescript2';
 const isProd = process.env.NODE_ENV === 'production';
+import { terser } from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import postcss from 'postcss';
 const purgecss = require('@fullhuman/postcss-purgecss')
@@ -30,6 +31,7 @@ export default {
     }
   ],
   plugins: [
+    terser(),
     peerDepsExternal(),
     resolve(),
     commonjs({
@@ -63,20 +65,20 @@ export default {
       //     .process(css)
       //     .then((result) => result.css),
     }),
-    copy({
-      targets: [
-        {
-          src: "src/variables.scss",
-          dest: "dist",
-          rename: "variables.scss"
-        },
-        {
-          src: "src/typography.scss",
-          dest: "dist",
-          rename: "typography.scss"
-        }
-      ]
-    })
+    // copy({
+    //   targets: [
+    //     {
+    //       src: "src/variables.scss",
+    //       dest: "dist",
+    //       rename: "variables.scss"
+    //     },
+    //     {
+    //       src: "src/typography.scss",
+    //       dest: "dist",
+    //       rename: "typography.scss"
+    //     }
+    //   ]
+    // })
   ],
   external: [
     ...Object.keys(packageJson.dependencies || {}),

@@ -22,9 +22,8 @@
   },
   "license": "ISC",
   "author": "next-dev-component",
-  "main": "./lib",
-  "types": "./lib/index.d.ts",
-  "module": "lib/index.esm.js",
+  "main": "lib",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
@@ -90,6 +89,7 @@
     "rollup-plugin-multi-input": "^1.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript-path-mapping": "^1.0.2",
     "sass-loader": "^8.0.2",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },

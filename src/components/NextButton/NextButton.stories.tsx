@@ -62,7 +62,7 @@ const button = [
     width="40px" height="40px"/`,
   },
 ];
-export const Primary = () => (
+export const AntPrimary = () => (
   <>
     <Layout>
       <UseMapItem data={button} isAntCol span={6} />
