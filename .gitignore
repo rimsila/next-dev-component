@@ -3,5 +3,6 @@ build/
 dist/
 lib/
 lib
+.env
 storybook-static/
 axios-typescript/

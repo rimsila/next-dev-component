@@ -19,5 +19,8 @@
     "src/**/*.stories.(tsx|md)",
     "src/**/*.test.tsx",
     "src/layout/**/*"
+  ],
+  "files": [
+    "./typings.d.ts"
   ]
 }
