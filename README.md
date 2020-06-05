@@ -1,4 +1,8 @@
 <p align="center">
+This is react typescript library stater we use sass for styling, storybook for docs and view demo, rollup for bundle script build for NPM.
+
+</p>
+<p align="center">
   <a href="https://ant.design">
     <img width="200" src="https://raw.githubusercontent.com/rimsila/next-dev-component/master/src/asset/logo1.png">
   </a>
@@ -12,15 +16,15 @@ A React UI library stater using Rollup, React Typescript, Storybook, Sass, Class
 
 ## 🔗 Links And Demo
 
-- [GitHub](https://github.com/rimsila/next-dev-component/tree/typescript-react-storybook-sass-library-starter)
-- [Document Components](https://rimsila.github.io/next-dev-component)
-- [Npm](https://www.npmjs.com/package/next-dev-component)
+ [GitHub](https://github.com/rimsila/next-dev-component/tree/typescript-react-storybook-sass-library-starter)
+ [Document Components](https://rimsila.github.io/next-dev-component)
+ [Npm](https://www.npmjs.com/package/next-dev-component)
 
 ## ✨ Features
 
-- 🌈 Enterprise-class UI designed for web applications.
-- 🛡 Written in TypeScript with predictable static types.
-- 🎨 Powerful theme customization in every detail.
+ 🌈 Enterprise-class UI designed for web applications.
+ 🛡 Written in TypeScript with predictable static types.
+ 🎨 Powerful theme customization in every detail.
 
 ## 📦 Install and build as your own library and publish to NPM
 
@@ -39,21 +43,17 @@ npm i --save next-dev-component
 ```jsx
 // we can only one components to reduce bundle size
 import  NextButton from 'next-dev-component/lib/components/NextButton';
-const App = () => (
-  <>
+
     <NextButton label="Round" isRound />
-  </>
-);
+ 
 ```
 
 ```jsx
 // we can import all components from whole library but it will use big bundle size
 import { NextButton } from 'next-dev-component';
 
-const App = () => (
-  <>
     <NextButton label="Round" isRound />
-  </>
+
 );
 ```
 
