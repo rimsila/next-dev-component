@@ -17,7 +17,15 @@ The content here won't be shown in stories.
 Next Button.
 
 ```js
+For usage we have import by two ways:
+
+--> first we use whole bundle 
 import { NextButton } from 'next-dev-component';
+<NextButton label="Primary Icon" icon={<PoweroffOutlined />} />;
+```
+```js
+--> Second Way use code split to reduce bundle size(Recomment)
+import NextButton from 'next-dev-component/lib/component/NextButton';
 
 <NextButton label="Primary Icon" icon={<PoweroffOutlined />} />;
 ```
