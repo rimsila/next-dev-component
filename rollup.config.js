@@ -72,7 +72,7 @@ export default {
     ]),
     terser(),
     copy({
-      //auto copy to use in lib 
+      //if we want to reuse our style in lib it will copy it
       targets: [
         {
           src: 'src/styles',

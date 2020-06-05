@@ -18,17 +18,25 @@ import packageJson from "./package.json";
 
 export default {
   input: "src/index.ts",
+  // output: [
+  //   {
+  //     file: packageJson.main,
+  //     format: "cjs",
+  //     sourcemap: true
+  //   },
+  //   {
+  //     file: packageJson.module,
+  //     format: "esm",
+  //     sourcemap: true
+  //   }
+  // ],
   output: [
     {
-      file: packageJson.main,
-      format: "cjs",
-      sourcemap: true
+      dir: packageJson.main,
+      format: 'cjs',
+      sourcemap: 'inline',
+      exports: 'named' /** Disable warning for default imports */,
     },
-    {
-      file: packageJson.module,
-      format: "esm",
-      sourcemap: true
-    }
   ],
   plugins: [
     terser(),
@@ -57,13 +65,13 @@ export default {
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     sass({
-      insert: true
-      // output: packageJson.main_css,
-      // outputStyle: 'compressed',
-      // processor: (css) =>
-      //   postcss([autoprefixer])
-      //     .process(css)
-      //     .then((result) => result.css),
+      insert: true,
+      output: packageJson.main_css,
+      outputStyle: 'compressed',
+      processor: (css) =>
+        postcss([autoprefixer])
+          .process(css)
+          .then((result) => result.css),
     }),
     // copy({
     //   targets: [
