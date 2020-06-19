@@ -16,5 +16,8 @@ export { default as NextButton12 } from './components/NextButton12';
 export { default as NextButton13 } from './components/NextButton13';
 export { default as NextCard } from './components/NextCard';
 
+// ========== Loading =============
+export { default as LoadingSpinner } from './components/LoadingSpinner';
+
 // ======== Util ===========
 export { default as UseMapItem } from './util/mapItem';
