@@ -19,7 +19,6 @@ export { default as NextCard } from './components/NextCard';
 // ========== common =============
 export { default as LoadingSpinner } from './components/LoadingSpinner';
 export { default as SubscribeEmail } from './components/SubscribeEmail';
-export { default as NextNProgress } from './components/NextNProgress';
 
 // ======== Util ===========
 export { default as UseMapItem } from './util/mapItem';
