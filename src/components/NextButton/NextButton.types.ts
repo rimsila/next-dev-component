@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 type postionType = 'btn_left' | 'btn_center' | 'btn_right';
-type spacingType = 'spacing30' | 'top30' | 'top20';
+type spacingType = 'm-20' | 'top30' | 'top20';
 type iconPostionType = 'icon_center';
 type btnType =
   | 'from-top'

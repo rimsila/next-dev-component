@@ -7,7 +7,6 @@ import classNames from 'classnames';
 export const NextButton2: FC<NextButtonProps> = (props) => {
   const {
     label,
-    isContainerSpacing,
     containerSpacing,
     isPostion = true,
     postion = 'btn_center',
@@ -20,7 +19,7 @@ export const NextButton2: FC<NextButtonProps> = (props) => {
         className={classNames(
           'NextButton2',
           isPostion && `${postion}`,
-          isContainerSpacing && `${containerSpacing}`
+          containerSpacing && `${containerSpacing}`
         )}
       >
         <a href="#" className="cta">
