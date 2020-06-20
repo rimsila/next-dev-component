@@ -4,7 +4,10 @@ import { Form, Input } from 'antd';
 import NextButton from '../NextButton';
 import { SubscribeEmailType } from './index.types';
 
-export const SubscribeEmail: FC<SubscribeEmailType> = ({ onFinish, customDecs }) => {
+export const SubscribeEmail: FC<SubscribeEmailType> = ({
+  onFinish,
+  customDecs,
+}) => {
   return (
     <div className="subscribe-email">
       <div className="newsletter">
