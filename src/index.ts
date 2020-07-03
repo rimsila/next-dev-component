@@ -1,3 +1,10 @@
+import {
+  getOnlyValue,
+  remainderFunc,
+  countLength,
+  formatCurrency,
+  formatThousand,
+} from './util';
 // all item want to use in lib must import here
 // ======== component ===========
 export { default as NextButton } from './components/NextButton';
@@ -22,3 +29,15 @@ export { default as SubscribeEmail } from './components/SubscribeEmail';
 
 // ======== Util ===========
 export { default as UseMapItem } from './util/mapItem';
+export { default as notificationType } from './util/notification';
+export { default as mediaQuery } from './util/mediaQuery';
+
+// ======== common ===========
+
+export default {
+  getOnlyValue,
+  remainderFunc,
+  formatCurrency,
+  formatThousand,
+  countLength,
+};

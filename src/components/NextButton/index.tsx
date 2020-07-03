@@ -10,7 +10,7 @@ export const NextButton: FC<NextButtonProps> = ({
   icon,
   isRound,
   htmlType,
-  width = '180px',
+  width,
   height = '',
   label = '',
   cusClass,

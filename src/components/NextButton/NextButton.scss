@@ -39,7 +39,7 @@
   .mainButton {
     height: 50px;
     text-transform: uppercase;
-    width: 180px;
+    min-width: 180px;
 
     @include sm {
       font-size: 11px;

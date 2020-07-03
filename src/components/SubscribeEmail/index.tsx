@@ -7,10 +7,12 @@ import { SubscribeEmailType } from './index.types';
 export const SubscribeEmail: FC<SubscribeEmailType> = ({
   onFinish,
   customDecs,
+  message,
+  style = { backgroundColor: '#151515' },
 }) => {
   return (
     <div className="subscribe-email">
-      <div className="newsletter">
+      <div className="newsletter" style={style}>
         <p>
           {customDecs ? (
             customDecs
@@ -27,12 +29,12 @@ export const SubscribeEmail: FC<SubscribeEmailType> = ({
           onFinish={onFinish}
         >
           <Form.Item
-            name="username"
+            name="email"
             rules={[
               {
                 required: true,
                 type: 'email',
-                message: 'The input is not valid E-mail!',
+                message: message || 'The input is not valid E-mail!',
               },
             ]}
           >

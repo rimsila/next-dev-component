@@ -8,9 +8,16 @@ export const LoadingSpinner: FC<LoadingType> = ({
   tip,
   style,
   className,
+  spinning,
 }) => (
   <div className="loading-spinner">
-    <Spin size={size} tip={tip} style={style} className={className} />
+    <Spin
+      size={size}
+      tip={tip}
+      style={style}
+      className={className}
+      spinning={spinning}
+    />
   </div>
 );
 export default LoadingSpinner;

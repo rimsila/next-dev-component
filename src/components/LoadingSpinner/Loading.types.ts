@@ -4,4 +4,5 @@ export interface LoadingType {
   tip?: string;
   style?: React.CSSProperties;
   className?: string;
+  spinning?: boolean;
 }
