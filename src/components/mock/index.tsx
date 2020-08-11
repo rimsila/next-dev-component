@@ -9,20 +9,20 @@ export const LoadingSpinner: FC = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          flexDirection:"column",
-          padding: 20
+          flexDirection: 'column',
+          padding: 20,
         }}
       >
         <h3>
           This is mock data has arr and object data for mock with random data
-          using faker 
+          using faker
         </h3>
         <img
           src={mockArr()[0].image}
           width="80px"
           style={{
             borderRadius: '5em',
-            margin: '1rem'
+            margin: '1rem',
           }}
         />
         <code>{JSON.stringify(mockArr()).substring(0, 500)}</code>
