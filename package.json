@@ -1,6 +1,6 @@
 {
   "name": "next-dev-component",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "keywords": [
     "React",
@@ -71,6 +71,7 @@
     "@types/recompose": "^0.30.7",
     "antd": "^4.2.5",
     "classnames": "^2.2.6",
+    "faker": "^4.1.0",
     "google-maps-react": "^2.0.6",
     "next": "^9.4.4",
     "react": "^16.13.1",

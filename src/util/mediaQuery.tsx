@@ -15,8 +15,8 @@ interface IProps extends React.HTMLAttributes<any> {
         'isMaxwidth',
         'isMinWidth'
       ]; // screen must be in type. If not will use default switch
-  minWidth?: number | [1201, 993, 769, 577, 481];
-  maxWidth?: number | [1200, 992, 768, 576, 480]; // we can put any number
+  minWidth?: number;
+  maxWidth?: number;
 }
 
 /*
@@ -33,8 +33,8 @@ interface IProps extends React.HTMLAttributes<any> {
 const mediaQuery: FC<IProps> = ({
   screen = 'isMinWidth',
   children,
-  minWidth = 320,
-  maxWidth = 1200,
+  minWidth,
+  maxWidth,
 }) => {
   const DesktopLg = ({ children }) => {
     const isDesktopLg = useMediaQuery({ maxWidth: 1200 });
