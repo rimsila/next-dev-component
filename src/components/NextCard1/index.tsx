@@ -7,7 +7,7 @@ import { mockObj } from '../../util/mock';
 import NextButton13 from '../NextButton13';
 
 export const NextCard1: FC<NextCardProps> = (props) => {
-  const { href = '#', img, desc, date,title, cusFooter } = props;
+  const { href = '#', img, desc, date, title, cusFooter } = props;
   return (
     <Col className={classNames('NextCard1')}>
       <a
@@ -22,13 +22,7 @@ export const NextCard1: FC<NextCardProps> = (props) => {
             <h1>{title}</h1>
             <p className="desc">{desc}</p>
             <div className="date">{date}</div>
-            {cusFooter || (
-              <NextButton13
-                label="effect12"
-                btn12Type="is-reversed fx-sliderIn"
-                url={href}
-              />
-            )}
+            {cusFooter || <NextButton13 label="Read More" />}
           </span>
         </div>
       </a>

@@ -8,9 +8,9 @@ import { Col } from 'antd';
 export const NextCard: FC<NextCardProps> = (props) => {
   const {
     isLoop,
-    title ,
+    title,
     image,
-    post ,
+    post,
     like,
     socialCusContent,
     footerContent,
@@ -22,11 +22,7 @@ export const NextCard: FC<NextCardProps> = (props) => {
   return (
     <Col>
       <div className={classNames('NextCard', 'card')}>
-        <img
-          src={image}
-          alt={image}
-          className="card__image"
-        />
+        <img src={image} alt={image} className="card__image" />
         <p className={classNames('card__name', cls_card__name)}>{title}</p>
         <div className="grid-container">
           {description ? (
