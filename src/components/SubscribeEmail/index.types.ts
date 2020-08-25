@@ -5,4 +5,7 @@ export interface SubscribeEmailType {
   customDecs?: React.ReactNode;
   message?: string | ReactElement;
   style?: CSSProperties;
+  backgroundColor?: string;
+  isRadius?: boolean;
+  cusCls?: string;
 }

@@ -1,12 +1,12 @@
 @import '../../styles/variables';
 @import '../../styles/util/mixins';
 
-.NextCardUI1 {
-  :root {
-    --color: #3c3163;
-    --transition-time: 0.5s;
-  }
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
 
+.NextCard1 {
   .cards-wrapper {
     display: grid;
     justify-content: center;
@@ -26,23 +26,33 @@
         rgba(0, 0, 0, var(--bg-filter-opacity))
       ),
       var(--bg-img);
-    height: 20em;
-    width: 15em;
+    height: 15em;
+    width: auto;
     font-size: 1.5em;
     color: white;
     border-radius: 1em;
-    padding: 1em;
+    // padding: 1em;
     /*margin: 2em;*/
     display: flex;
     align-items: flex-end;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 5em -1em black;
+    box-shadow: 0 0 2em -1em black;
     transition: all, var(--transition-time);
     position: relative;
     overflow: hidden;
     border: 10px solid #ccc;
     text-decoration: none;
+    .card-body {
+      height: 15em;
+      display: flex;
+      align-items: flex-end;
+      background: #0000007d;
+      padding: 1em;
+      .desc {
+        @include lineClamp($val: 3);
+      }
+    }
   }
 
   .card:hover {
@@ -54,16 +64,13 @@
     font-size: 1.5em;
     line-height: 1.2em;
     color: white;
-    &:hover {
-      color: black;
-    }
   }
 
   .card p {
     font-size: 0.75em;
     font-family: 'Open Sans';
     margin-top: 0.5em;
-    line-height: 2em;
+    line-height: 1.5em;
   }
 
   .card .tags {
@@ -81,8 +88,8 @@
   }
 
   .card:hover .tags .tag {
-    background: var(--color);
-    color: white;
+    // background: var(--color);
+    // color: white;
   }
 
   .card .date {
@@ -110,19 +117,19 @@
   }
 
   .card:before {
-    background: #ddd;
+    background: #ffffff17;
     width: 250%;
     height: 250%;
   }
 
   .card:after {
-    background: white;
+    background: #ffffff17;
     width: 200%;
     height: 200%;
   }
 
   .card:hover {
-    color: var(--color);
+    // color: var(--color);
   }
 
   .card:hover:before,

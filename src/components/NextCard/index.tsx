@@ -8,10 +8,10 @@ import { Col } from 'antd';
 export const NextCard: FC<NextCardProps> = (props) => {
   const {
     isLoop,
-    title = 'card user - loop',
+    title ,
     image,
-    post = '156 Post',
-    like = '1012 Likes',
+    post ,
+    like,
     socialCusContent,
     footerContent,
     socialList = [],
@@ -21,10 +21,10 @@ export const NextCard: FC<NextCardProps> = (props) => {
   } = props;
   return (
     <Col>
-      <div className={classNames('NextCardUI2', 'card')}>
+      <div className={classNames('NextCard', 'card')}>
         <img
-          src={image || '/asset/images/components/user_mock.png'}
-          alt="Person"
+          src={image}
+          alt={image}
           className="card__image"
         />
         <p className={classNames('card__name', cls_card__name)}>{title}</p>

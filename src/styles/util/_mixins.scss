@@ -7,6 +7,13 @@
 //mixin for container width
 @import '../variables';
 
+@mixin lineClamp($val: null) {
+  display: -webkit-box;
+  -webkit-line-clamp: $val;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin containerWidth($wdm: null, $mgm: auto) {
   margin: $mgm;
   width: $wdm;

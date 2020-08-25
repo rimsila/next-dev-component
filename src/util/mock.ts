@@ -1,7 +1,7 @@
 import faker from 'faker';
 
 // =========== for development purpose only ===========
-
+// https://www.npmjs.com/package/faker
 const createUserRadomArr = () => {
   return {
     name: faker.name.findName(),
@@ -24,7 +24,12 @@ export const mockArr = (numUsers = 5) => {
 // mock random obj
 
 export const mockObj = () => {
-  const object = faker.helpers.createCard();
+  const object = {
+    ...faker.helpers.createCard(),
+    image: faker.image.image(),
+    desc: faker.lorem.paragraphs(),
+    avatar: faker.image.avatar(),
+  };
   // tslint:disable-next-line: no-console
   console.log('mock Obj', object);
   return object;

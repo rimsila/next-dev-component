@@ -3,20 +3,29 @@ import './styles.scss';
 import { Form, Input } from 'antd';
 import NextButton from '../NextButton';
 import { SubscribeEmailType } from './index.types';
+import classNames from 'classnames';
 
 export const SubscribeEmail: FC<SubscribeEmailType> = ({
   onFinish,
   customDecs,
   message,
-  style = { backgroundColor: '#151515' },
+  backgroundColor = '#151515',
+  isRadius,
+  style,
+  cusCls,
 }) => {
   return (
-    <div className="subscribe-email">
-      <div className="newsletter" style={style}>
+    <div className={classNames('subscribe-email', cusCls)}>
+      <div
+        className="newsletter"
+        style={{
+          backgroundColor,
+          borderRadius: isRadius && 10,
+          ...style,
+        }}
+      >
         <p>
-          {customDecs ? (
-            customDecs
-          ) : (
+          {customDecs || (
             <>
               Join our subscribes list to get the latest news and special offers
             </>

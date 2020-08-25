@@ -9,14 +9,43 @@ export default {
 
 const component = [
   {
-    item: <SubscribeEmail />,
+    item: (
+      <>
+        <h5>Default</h5>
+        <br />
+        <SubscribeEmail />
+      </>
+    ),
     copyCode: `<SubscribeEmail onFinish={onFinish}/>`,
+  },
+  {
+    item: (
+      <>
+        <h5>Custom</h5>
+        <br />
+        <SubscribeEmail
+          {...{
+            isRadius: true,
+            customDecs: 'lorem Collection of blog card code examples.',
+            backgroundColor: 'orange',
+            cusCls: 'cusCls',
+          }}
+        />
+      </>
+    ),
+    copyCode: `<SubscribeEmail
+    {...{
+      isRadius: true,
+      customDecs: 'lorem Collection of blog card code examples.',
+      backgroundColor: 'orange',
+      cusCls: 'cusCls',
+    }} `,
   },
 ];
 
 export const Subscribe = () => (
   <>
-    <Layout>
+    <Layout gut1={20}>
       <UseMapItem data={component} isAntCol span={6} />
     </Layout>
   </>

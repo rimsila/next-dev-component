@@ -1,4 +1,9 @@
 .subscribe-email {
+  &.cusCls {
+    .ant-form-item-explain {
+      color: white;
+    }
+  }
   .newsletter {
     padding: 20px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
@@ -21,9 +26,9 @@
       border: none;
     }
   }
-  :global {
-    .ant-form-item-explain {
-      line-height: 2.5715;
-    }
-  }
+  // :global {
+  //   .ant-form-item-explain {
+  //     line-height: 2.5715;
+  //   }
+  // }
 }
