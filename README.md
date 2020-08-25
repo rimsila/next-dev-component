@@ -10,9 +10,9 @@
 
 A React UI library custom styles and extend from Ant Design.
 
-<h1 align="center">This library is under development and propose for use in internal team only. But if you think it have benefit for you we can use it. thanks you </h1>
+<h1>This library is under development and propose for use in internal team only. But if you think it have benefit for you we can use it. thanks you </h1>
 
-<h1 align="center">For who want make a react library you see here:  
+<h1>For who want make a react library you see here:  
 - [Library Starter](https://github.com/rimsila/next-dev-component/tree/typescript-react-storybook-sass-library-starter)
  </h1>
 
