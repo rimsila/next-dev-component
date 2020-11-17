@@ -30,7 +30,6 @@ export { default as SubscribeEmail } from './components/SubscribeEmail';
 // ======== Util ===========
 export { default as UseMapItem } from './util/mapItem';
 export { default as notificationType } from './util/notification';
-export { default as mediaQuery } from './util/mediaQuery';
 
 // ======== common ===========
 
