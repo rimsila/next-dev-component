@@ -1,4 +1,5 @@
-deprecated) - Right now I have move to use mono package with modern technology see in next-dev repo)
+# Deprecated 
+- Right now I have move to use mono package with modern technology see in  [next-dev repo](https://github.com/rimsila/next-dev)
 <p align="center">
   <a href="https://ant.design">
     <img width="200" src="https://raw.githubusercontent.com/rimsila/next-dev-component/master/src/asset/logo1.png">
